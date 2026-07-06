@@ -69,8 +69,8 @@
 
 ## Push status
 
-- Pending initial repository creation.
+- Created and pushed successfully.
 
 ## GitHub URL
 
-- `UAIC-BSc-Math/.github` (not yet created)
+- https://github.com/UAIC-BSc-Math/.github
