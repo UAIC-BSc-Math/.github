@@ -1,0 +1,50 @@
+name: Large file / LFS review
+description: Track files that may require Git LFS or local-only handling.
+title: "[Large file review]: "
+labels: ["lfs", "large-file"]
+body:
+  - type: input
+    id: course_repo
+    attributes:
+      label: Course repo
+      placeholder: "a4rne-neural-networks"
+    validations:
+      required: true
+  - type: input
+    id: file_path
+    attributes:
+      label: File path
+      placeholder: "MF1FuM The foundations of mathematics/math msc/1. Topology/imgs/example.mp4"
+    validations:
+      required: true
+  - type: input
+    id: file_size
+    attributes:
+      label: File size
+      placeholder: "539.6 MB"
+    validations:
+      required: true
+  - type: dropdown
+    id: current_status
+    attributes:
+      label: Current status
+      options:
+        - LFS review
+        - large-file risk
+        - local only
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: Recommended action
+      options:
+        - Use Git LFS
+        - Split repository
+        - Keep local only
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

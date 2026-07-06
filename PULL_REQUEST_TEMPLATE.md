@@ -1,0 +1,8 @@
+- [ ] This PR does not add copyrighted content excerpts.
+- [ ] This PR does not make private material public.
+- [ ] Metadata JSON validates.
+- [ ] Material paths exist.
+- [ ] Concept/relation ids are stable.
+- [ ] Large files were checked.
+- [ ] README links were checked.
+- [ ] Manual-review warnings were preserved.

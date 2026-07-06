@@ -1,0 +1,38 @@
+name: Validate semantic metadata
+
+    on:
+      push:
+      pull_request:
+
+    jobs:
+      validate-json:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - uses: actions/setup-python@v5
+            with:
+              python-version: '3.x'
+          - name: Validate JSON syntax under data/
+            run: |
+              python - <<'PY'
+              from pathlib import Path
+              import json
+              import sys
+
+              root = Path('.')
+              paths = sorted(root.rglob('data/*.json'))
+              errors = []
+              for path in paths:
+                  try:
+                      json.loads(path.read_text(encoding='utf-8'))
+                  except Exception as exc:
+                      errors.append(f"{path}: {exc}")
+              if errors:
+                  print('
+'.join(errors))
+                  sys.exit(1)
+              print(f'Validated {len(paths)} JSON files.')
+              PY
+          - name: Check README exists
+            run: |
+              test -f README.md || { echo "README.md missing"; exit 1; }

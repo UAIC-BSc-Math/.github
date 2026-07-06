@@ -1,0 +1,58 @@
+name: Material review
+description: Review whether a file or material belongs in a course repository.
+title: "[Material review]: "
+labels: ["needs-review"]
+body:
+  - type: input
+    id: course_repo
+    attributes:
+      label: Course repo
+      description: Repository that contains or should contain the material.
+      placeholder: "m-1all-linear-algebra"
+    validations:
+      required: true
+  - type: input
+    id: material_path
+    attributes:
+      label: Material path
+      description: Relative path of the file or folder.
+      placeholder: "course/ro/cursus/example.pdf"
+    validations:
+      required: true
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      options:
+        - Classification
+        - Rights / publication concern
+        - Duplicate or collision
+        - Missing metadata
+    validations:
+      required: true
+  - type: input
+    id: current_classification
+    attributes:
+      label: Current classification
+      placeholder: "course_notes"
+    validations:
+      required: true
+  - type: input
+    id: proposed_classification
+    attributes:
+      label: Proposed classification
+      placeholder: "exam"
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Rights / publication concern
+      description: Explain why this material may need review before publication.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Additional context.

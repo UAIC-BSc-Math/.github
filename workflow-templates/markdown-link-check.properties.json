@@ -1,0 +1,9 @@
+{
+  "name": "Markdown Link Check",
+  "description": "Template workflow placeholder for future markdown link checks.",
+  "iconName": "link",
+  "categories": [
+    "CI",
+    "Documentation"
+  ]
+}

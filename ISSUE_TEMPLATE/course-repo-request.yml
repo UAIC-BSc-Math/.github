@@ -1,0 +1,45 @@
+name: Course repo request
+description: Request creation or repair of a missing or manual course repository.
+title: "[Course repo request]: "
+labels: ["course-repo"]
+body:
+  - type: input
+    id: course_code
+    attributes:
+      label: Course code
+      placeholder: "M_1AlL"
+    validations:
+      required: true
+  - type: input
+    id: course_title
+    attributes:
+      label: Course title
+      placeholder: "Linear algebra"
+    validations:
+      required: true
+  - type: input
+    id: local_folder
+    attributes:
+      label: Local folder
+      placeholder: "M_1AlL Linear algebra"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+    validations:
+      required: true
+  - type: textarea
+    id: material_status
+    attributes:
+      label: Material status
+    validations:
+      required: true
+  - type: input
+    id: proposed_repo_name
+    attributes:
+      label: Proposed repo name
+      placeholder: "m-1all-linear-algebra"
+    validations:
+      required: true

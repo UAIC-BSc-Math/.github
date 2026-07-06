@@ -1,0 +1,45 @@
+name: Metadata fix
+description: Report incorrect concept, relation, unit, or curriculum metadata.
+title: "[Metadata fix]: "
+labels: ["metadata"]
+body:
+  - type: input
+    id: course_repo
+    attributes:
+      label: Course repo
+      placeholder: "mf2caf-special-chapters-on-functional-analysis"
+    validations:
+      required: true
+  - type: input
+    id: metadata_file
+    attributes:
+      label: Metadata file
+      placeholder: "data/concept.json"
+    validations:
+      required: true
+  - type: input
+    id: item_id
+    attributes:
+      label: Concept / relation / unit id
+      placeholder: "banach-spaces"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Short evidence only.
+    validations:
+      required: true

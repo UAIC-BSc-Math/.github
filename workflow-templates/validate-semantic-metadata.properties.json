@@ -1,0 +1,9 @@
+{
+  "name": "Validate semantic metadata",
+  "description": "Template workflow for JSON syntax checks and README presence validation.",
+  "iconName": "check-circle",
+  "categories": [
+    "CI",
+    "Code review"
+  ]
+}
