@@ -1,0 +1,10 @@
+name: Documentation issue
+description: Report missing or unclear documentation
+title: "[DOC] <short description>"
+labels: documentation
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+      description: What is unclear or missing?

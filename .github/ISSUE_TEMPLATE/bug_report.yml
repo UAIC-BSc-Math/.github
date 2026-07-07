@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a bug or broken behavior
+title: "[BUG] <short description>"
+labels: bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What went wrong?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Steps to reproduce the issue
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, version, etc.
